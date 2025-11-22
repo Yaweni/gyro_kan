@@ -1,0 +1,39 @@
+{
+
+    
+      "image" : "gyrokan",
+  
+      "mounts":[
+   
+        //   "source=${localWorkspaceFolder}/../images,target=/workspaces/gyro_kan,type=bind,consistency=cached",
+      ],
+  
+      "runArgs":[
+  
+          "--gpus=all",
+        //   "-e", "HOST_UID=$(id -u)",
+        //   "-e", "HOST_GID=$(id -g)",
+          "--shm-size=30g",
+          // "-m", "25g",
+          // "-u", "0", // root user
+      ],
+
+      "forwardPorts": [6006, 8080],
+  
+      "customizations": {
+          // Configure properties specific to VS Code.
+          "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-azuretools.vscode-docker",
+                "streetsidesoftware.code-spell-checker",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.tensorboard"
+              ]
+              
+          }
+        },
+  
+  
+  }
