@@ -12,13 +12,35 @@ A PyTorch Lightning project for training neural networks on the MNIST dataset wi
 
 ## Prerequisites
 
-- Docker
-- VS Code with Dev Containers extension
+- Python 3.8+
+- uv (install via `curl -LsSf https://astral.sh/uv/install.sh | sh` on Unix or download from https://github.com/astral-sh/uv)
 - NVIDIA GPU (optional, for GPU acceleration)
 
 ## Setup
 
-### Building the Docker Image
+### Using uv (Recommended for Local Development)
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd gyro_kan
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   uv venv
+   # On Windows: .venv\Scripts\activate
+   # On Unix: source .venv/bin/activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   uv pip install -r requirements.txt
+   ```
+
+This sets up a local environment with all required packages (PyTorch, PyTorch Lightning, Optuna, TensorBoard, Jupyter).
+
+### Building the Docker Image (Alternative)
 
 1. Clone the repository:
    ```bash
@@ -31,7 +53,7 @@ A PyTorch Lightning project for training neural networks on the MNIST dataset wi
    docker build -t gyrokan .
    ```
 
-### VS Code Integration with Dev Container
+### VS Code Integration with Dev Container (Alternative)
 
 1. Open the project in VS Code.
 

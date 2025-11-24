@@ -1,2 +1,7 @@
 lightning_logs/*
 MNIST/*
+data/*
+Tandem_Edge_Gyro_MLP.ipynb
+Technical introduction.md
+prompt.md
+uci_har.zip
